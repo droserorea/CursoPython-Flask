@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block title%}
+    Crear estudiante
+{%endblock%}
+
+{%block content%}
+<form method="post">
+    <label>Estudiante</label>
+    <input name="nombre" required/>
+    <label>Cedula</label>
+    <input name="cedula" required/>
+    <label>Fecha</label>
+    <input name="fecha" required/>
+    <input type="submit" value="Guardar"/>
+</form>
+{% endblock %}
