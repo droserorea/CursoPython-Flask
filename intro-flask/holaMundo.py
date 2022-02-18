@@ -41,12 +41,13 @@ def  home():
 def crear():
     if request.method=="POST":
         cedula= request.form['cedula']
-        nombre= request.form['nombre']
         fecha= request.form['fecha']
+        nombre= request.form['nombre']
+        
         sql= "INSERT INTO public.estudiantes(cedula, fecha, nombre) VALUES (%s,%s,%s)"
         values= (cedula,fecha,nombre)
         cursor.execute(sql,values)
         conexion.commit()
         return redirect(url_for('home'))
-        
+
     return render_template ('crear.html')
