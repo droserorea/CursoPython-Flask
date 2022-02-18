@@ -48,4 +48,5 @@ def crear():
         cursor.execute(sql,values)
         conexion.commit()
         return redirect(url_for('home'))
+        
     return render_template ('crear.html')
